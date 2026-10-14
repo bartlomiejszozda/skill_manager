@@ -1,0 +1,17 @@
+# Python caches and virtual environments
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Local credentials and environment configuration
+.env
+.env.*
+!.env.example
+!.env.sample
+/.aws/
+
+# Skill manager runtime files and external checkouts
+.skill-links.lock
+.skill-links.lock

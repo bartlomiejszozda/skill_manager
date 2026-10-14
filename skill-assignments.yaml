@@ -1,0 +1,17 @@
+# Named directories where skill symlinks will be created.
+# Use absolute paths or paths relative to this repository.
+targets:
+  demo-a: /tmp/skill-links-demo-a/.agents
+  demo-b: /tmp/skill-links-demo-b/.claude
+
+collections:
+  # Matches the directory skills_source/dummy_skills/.
+  dummy_skills:
+    # Default destinations for every skill, including newly added ones.
+    # dummy-hello is not listed below, so it inherits demo-a.
+    targets: [demo-a]
+    skills:
+      # An empty list means install nowhere.
+      dummy-unused: []
+      # An override replaces the collection defaults; it does not add to them.
+      dummy-goodbye: [demo-b]
